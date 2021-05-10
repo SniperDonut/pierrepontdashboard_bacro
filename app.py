@@ -11,6 +11,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from sodapy import Socrata
 
+version = "1.0"
 client = Socrata("data.ct.gov", None)
 results = client.get("28fr-iqnx",limit=50000)
 cvd = pd.DataFrame.from_records(results)
